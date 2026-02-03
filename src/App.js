@@ -86,7 +86,7 @@ const ExtractionInterface = () => {
           {
             assumption: 'Mine production capacity: 590t/day',
             expertReport: 'Second Report, Para 6.39',
-            witnessStatement: 'CEO Statement, Para 15',
+            witnessStatement: 'Ricardo Mendoza Statement, Para 15',
             status: 'verified',
             confidence: 'high',
             citations: {
@@ -96,7 +96,7 @@ const ExtractionInterface = () => {
               },
               witness: {
                 para: '15',
-                witness: 'CEO',
+                witness: 'Ricardo Mendoza (CEO)',
                 context: 'The Invicta Gold Project processing plant was specifically designed and engineered for a throughput capacity of 590 tonnes per day. This capacity was based on detailed metallurgical testing conducted by SGS Laboratories in Lima and was consistent with the proven reserve base that we had demonstrated through our 2018 drilling program. The crushing circuit, ball mill, and flotation cells were all sized to handle this production rate, and we had secured firm purchase orders for the key equipment components before the regulatory issues arose in August 2019.'
               }
             }
@@ -104,18 +104,18 @@ const ExtractionInterface = () => {
           {
             assumption: 'Production life: 10 years',
             expertReport: 'Second Report, Para 6.42',
-            witnessStatement: 'CFO Statement, Para 8',
+            witnessStatement: 'Patricia Santillán Statement, Para 8',
             status: 'verified',
             confidence: 'medium',
             note: 'Range given (8-10 years), expert used upper bound',
             citations: {
               expert: {
                 para: '6.42',
-                context: 'Our mine life assumption of 10 years is based on the proven and probable mineral reserves as reported in the company\'s 2019 technical report, combined with the anticipated production rate of 590 tonnes per day. This timeframe assumes continuous mining operations and accounts for the ore grade distribution across the deposit. While the CFO\'s witness statement indicates a range of 8-10 years for reserve depletion, we have adopted the upper bound of this range as it aligns with the reserve calculations and processing capacity that form the basis of our DCF model.'
+                context: 'Our mine life assumption of 10 years is based on the proven and probable mineral reserves as reported in the company\'s 2019 technical report, combined with the anticipated production rate of 590 tonnes per day. This timeframe assumes continuous mining operations and accounts for the ore grade distribution across the deposit. While Ms. Santillán\'s witness statement indicates a range of 8-10 years for reserve depletion, we have adopted the upper bound of this range as it aligns with the reserve calculations and processing capacity that form the basis of our DCF model.'
               },
               witness: {
                 para: '8',
-                witness: 'CFO',
+                witness: 'Patricia Santillán (CFO)',
                 context: 'Based on our proven and probable reserves of approximately 1.8 million tonnes of ore and the planned production rate, we estimated that the Invicta mine would have an operational life in the range of 8 to 10 years. This estimate incorporated our understanding of the ore body geometry, expected recovery rates of approximately 92%, and the grade distribution within the deposit. The actual mine life would depend on gold prices, operating costs, and the economic cutoff grade, which could vary over time, but 8-10 years represented our best technical assessment as of mid-2019.'
               }
             }
@@ -142,17 +142,17 @@ const ExtractionInterface = () => {
           {
             assumption: 'Revised production capacity: 590t/day',
             expertReport: 'Second Report, Para 145(b)',
-            witnessStatement: 'CEO Statement, Para 15',
+            witnessStatement: 'Ricardo Mendoza Statement, Para 15',
             status: 'verified',
             confidence: 'high',
             citations: {
               expert: {
                 para: '145(b)',
-                context: 'We acknowledge that the Claimant\'s engineering plans contemplated a processing capacity of 590 tonnes per day, and we have revised our valuation to reflect this production scenario rather than the 355t/day capacity we initially considered. Based on our review of the technical documentation and witness testimony, including the CEO\'s statement regarding the design specifications, we accept that 590t/day represents the intended production capacity. However, as discussed below, we differ from the Claimant\'s expert on other critical assumptions including mine life and discount rate.'
+                context: 'We acknowledge that the Claimant\'s engineering plans contemplated a processing capacity of 590 tonnes per day, and we have revised our valuation to reflect this production scenario rather than the 355t/day capacity we initially considered. Based on our review of the technical documentation and witness testimony, including Mr. Mendoza\'s statement regarding the design specifications, we accept that 590t/day represents the intended production capacity. However, as discussed below, we differ from the Claimant\'s expert on other critical assumptions including mine life and discount rate.'
               },
               witness: {
                 para: '15',
-                witness: 'CEO',
+                witness: 'Ricardo Mendoza (CEO)',
                 context: 'The Invicta Gold Project processing plant was specifically designed and engineered for a throughput capacity of 590 tonnes per day. This capacity was based on detailed metallurgical testing conducted by SGS Laboratories in Lima and was consistent with the proven reserve base that we had demonstrated through our 2018 drilling program. The crushing circuit, ball mill, and flotation cells were all sized to handle this production rate, and we had secured firm purchase orders for the key equipment components before the regulatory issues arose in August 2019.'
               }
             }
@@ -160,7 +160,7 @@ const ExtractionInterface = () => {
           {
             assumption: 'Production life: 7 years (not 10)',
             expertReport: 'Second Report, Para 145(b)',
-            witnessStatement: 'CFO Statement, Para 8',
+            witnessStatement: 'Patricia Santillán Statement, Para 8',
             status: 'conflict',
             confidence: 'high',
             note: 'Witness states 8-10 years, expert uses 7 years without explanation',
@@ -171,7 +171,7 @@ const ExtractionInterface = () => {
               },
               witness: {
                 para: '8',
-                witness: 'CFO',
+                witness: 'Patricia Santillán (CFO)',
                 context: 'Based on our proven and probable reserves of approximately 1.8 million tonnes of ore and the planned production rate, we estimated that the Invicta mine would have an operational life in the range of 8 to 10 years. This estimate incorporated our understanding of the ore body geometry, expected recovery rates of approximately 92%, and the grade distribution within the deposit. The actual mine life would depend on gold prices, operating costs, and the economic cutoff grade, which could vary over time, but 8-10 years represented our best technical assessment as of mid-2019.'
               }
             }
@@ -179,7 +179,7 @@ const ExtractionInterface = () => {
           {
             assumption: 'Additional risk premium due to regulatory uncertainty',
             expertReport: 'Second Report, Para 144',
-            witnessStatement: 'Government Relations Officer Statement, Para 22',
+            witnessStatement: 'Miguel Rodríguez Statement, Para 22',
             status: 'conflict',
             confidence: 'medium',
             note: 'Witness indicates stability; expert assumes heightened risk',
@@ -190,7 +190,7 @@ const ExtractionInterface = () => {
               },
               witness: {
                 para: '22',
-                witness: 'Government Relations Officer',
+                witness: 'Miguel Rodríguez (Government Relations)',
                 context: 'Throughout 2018 and the first seven months of 2019, our environmental and operating permits remained stable and in good standing with all relevant Peruvian government authorities. We maintained regular communication with MINEM (Ministry of Energy and Mines) and conducted all required environmental monitoring and reporting in full compliance with applicable regulations. While there were some general discussions in the media about mining policy reforms, we had no indication from government officials that our specific permits were at risk or that any new regulatory restrictions would be imposed on the Invicta project. It was only in late August 2019 that the regulatory situation deteriorated suddenly and unexpectedly.'
               }
             }

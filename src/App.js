@@ -8,7 +8,7 @@ const ExtractionInterface = () => {
     respondent: { report: [], excel: [], witness: [] },
     tribunal: { report: [], excel: [], witness: [] }
   });
-  const [extracting, setExtracting] = useState(false);
+  const [, setExtracting] = useState(false);
   const [progress, setProgress] = useState(0);
   const [extractedData, setExtractedData] = useState(null);
   const [witnessAudit, setWitnessAudit] = useState(null);

@@ -23,7 +23,7 @@ const ExtractionInterface = () => {
   const demoCases = {
     lupaka: {
       claimant: {
-        expert: 'Accuracy',
+        expert: 'Quantum Economics',
         scenario: '590t/day',
         damages: '$41.0M',
         wacc: '12.2%',
@@ -33,7 +33,7 @@ const ExtractionInterface = () => {
         citations: { damages: { para: '6.63(a)' }, wacc: { para: '6.38' }, scenario: { para: '6.39' }, production: { para: '6.42' } }
       },
       respondent: {
-        expert: 'AlixPartners',
+        expert: 'Horizon Advisors',
         scenario: '590t/day (revised)',
         damages: '$20.5M',
         wacc: '14.6%',
@@ -236,7 +236,7 @@ const ExtractionInterface = () => {
   const loadExcelAuditData = () => {
     setExcelAudit({
       claimant: {
-        fileName: 'Accuracy_DCF_Model_v2.xlsx',
+        fileName: 'Quantum Economics_DCF_Model_v2.xlsx',
         issues: [
           {
             severity: 'high',
@@ -272,7 +272,7 @@ const ExtractionInterface = () => {
         }
       },
       respondent: {
-        fileName: 'AlixPartners_Valuation_Model.xlsx',
+        fileName: 'Horizon Advisors_Valuation_Model.xlsx',
         issues: [
           {
             severity: 'critical',
@@ -364,7 +364,7 @@ const ExtractionInterface = () => {
         // Real Lupaka Gold v. Peru expert report data
         setExtractedData({
           claimant: {
-            expert: 'Accuracy',
+            expert: 'Quantum Economics',
             scenario: '590t/day',
             damages: '$41.0M',
             wacc: '12.2%',
@@ -383,7 +383,7 @@ const ExtractionInterface = () => {
             }
           },
           respondent: {
-            expert: 'AlixPartners',
+            expert: 'Horizon Advisors',
             scenario: '590t/day (revised)',
             damages: '$20.5M',
             wacc: '14.6%',
@@ -727,8 +727,8 @@ const ExtractionInterface = () => {
             <thead>
               <tr>
                 <th style={styles.th}></th>
-                <th style={styles.th}>Claimant (Accuracy)</th>
-                <th style={styles.th}>Respondent (AlixPartners)</th>
+                <th style={styles.th}>Claimant (Quantum Economics)</th>
+                <th style={styles.th}>Respondent (Horizon Advisors)</th>
                 <th style={styles.th}>Status</th>
               </tr>
             </thead>
@@ -836,7 +836,7 @@ const ExtractionInterface = () => {
             <div style={styles.modalContent}>
               <button onClick={() => setSelectedCitation(null)} style={styles.closeBtn}>×</button>
               <h3>Citation Viewer</h3>
-              <p><strong>Document:</strong> {selectedCitation.party === 'claimant' ? 'Second Expert Report of Accuracy' : 'Second Expert Report of AlixPartners'}</p>
+              <p><strong>Document:</strong> {selectedCitation.party === 'claimant' ? 'Second Expert Report of Quantum Economics' : 'Second Expert Report of Horizon Advisors'}</p>
               <p><strong>Location:</strong> Paragraph {extractedData[selectedCitation.party].citations[selectedCitation.field].para}</p>
               
               <div style={styles.pdfPreview}>
@@ -980,7 +980,7 @@ const ExtractionInterface = () => {
               ...(selectedParty === 'claimant' ? styles.partySelectorActive : {})
             }}
           >
-            Claimant (Accuracy)
+            Claimant (Quantum Economics)
             <span style={styles.issueCountBadge}>
               {excelAudit.claimant.summary.total} issues
             </span>
@@ -992,7 +992,7 @@ const ExtractionInterface = () => {
               ...(selectedParty === 'respondent' ? styles.partySelectorActive : {})
             }}
           >
-            Respondent (AlixPartners)
+            Respondent (Horizon Advisors)
             <span style={styles.issueCountBadge}>
               {excelAudit.respondent.summary.total} issues
             </span>
@@ -1159,7 +1159,7 @@ const ExtractionInterface = () => {
               ...(selectedParty === 'claimant' ? styles.partySelectorActive : {})
             }}
           >
-            Claimant (Accuracy)
+            Claimant (Quantum Economics)
             {witnessAudit.claimant.issues > 0 && (
               <span style={styles.issueBadge}>{witnessAudit.claimant.issues}</span>
             )}
@@ -1171,7 +1171,7 @@ const ExtractionInterface = () => {
               ...(selectedParty === 'respondent' ? styles.partySelectorActive : {})
             }}
           >
-            Respondent (AlixPartners)
+            Respondent (Horizon Advisors)
             {witnessAudit.respondent.issues > 0 && (
               <span style={styles.issueBadge}>{witnessAudit.respondent.issues}</span>
             )}
@@ -1188,7 +1188,7 @@ const ExtractionInterface = () => {
               <button onClick={() => setSelectedCitation(null)} style={styles.closeBtn}>×</button>
               <h3>Citation Viewer</h3>
               <p><strong>Document:</strong> {selectedCitation.type === 'expert'
-                ? (selectedParty === 'claimant' ? 'Expert Report of Accuracy' : 'Expert Report of AlixPartners')
+                ? (selectedParty === 'claimant' ? 'Expert Report of Quantum Economics' : 'Expert Report of Horizon Advisors')
                 : `Witness Statement - ${currentPartyData.assumptions[selectedCitation.assumptionIdx].citations.witness.witness}`
               }</p>
               <p><strong>Location:</strong> Paragraph {

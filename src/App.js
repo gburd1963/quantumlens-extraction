@@ -69,10 +69,42 @@ const ExtractionInterface = () => {
 
   const loadDemo = (key) => {
     if (!demoCases[key]) return;
+
+    // Create demo files for the organize screen
+    const demoFiles = {
+      claimant: {
+        report: [
+          { name: 'Claimant_Expert_Report_First.pdf', type: 'application/pdf' },
+          { name: 'Claimant_Expert_Report_Second.pdf', type: 'application/pdf' }
+        ],
+        excel: [
+          { name: 'Claimant_DCF_Model.xlsx', type: 'application/vnd.openxmlformats-officedocument.spreadsheetml.sheet' }
+        ],
+        witness: [
+          { name: 'Witness_Statement_CEO.pdf', type: 'application/pdf' },
+          { name: 'Witness_Statement_CFO.pdf', type: 'application/pdf' }
+        ]
+      },
+      respondent: {
+        report: [
+          { name: 'Respondent_Expert_Report_First.pdf', type: 'application/pdf' },
+          { name: 'Respondent_Expert_Report_Second.pdf', type: 'application/pdf' }
+        ],
+        excel: [
+          { name: 'Respondent_Valuation_Model.xlsx', type: 'application/vnd.openxmlformats-officedocument.spreadsheetml.sheet' }
+        ],
+        witness: [
+          { name: 'Witness_Statement_Government_Relations.pdf', type: 'application/pdf' }
+        ]
+      },
+      tribunal: { report: [], excel: [], witness: [] }
+    };
+
+    setOrganizedFiles(demoFiles);
     setExtractedData(demoCases[key]);
     setProgress(100);
     setExtracting(false);
-    setStep(4);
+    setStep(2); // Show organize screen instead of jumping to step 4
     // Also load audit data for demo
     loadWitnessAuditData();
     loadExcelAuditData();

@@ -104,7 +104,7 @@ const ExtractionInterface = () => {
           {
             assumption: 'Production life: 10 years',
             expertReport: 'Second Report, Para 6.42',
-            witnessStatement: 'Patricia Santillán Statement, Para 8',
+            witnessStatement: 'Patricia Santillan Statement, Para 8',
             status: 'verified',
             confidence: 'medium',
             note: 'Range given (8-10 years), expert used upper bound',
@@ -115,7 +115,7 @@ const ExtractionInterface = () => {
               },
               witness: {
                 para: '8',
-                witness: 'Patricia Santillán (CFO)',
+                witness: 'Patricia Santillan (CFO)',
                 context: 'Based on our proven and probable reserves of approximately 1.8 million tonnes of ore and the planned production rate, we estimated that the Invicta mine would have an operational life in the range of 8 to 10 years. This estimate incorporated our understanding of the ore body geometry, expected recovery rates of approximately 92%, and the grade distribution within the deposit. The actual mine life would depend on gold prices, operating costs, and the economic cutoff grade, which could vary over time, but 8-10 years represented our best technical assessment as of mid-2019.'
               }
             }
@@ -160,7 +160,7 @@ const ExtractionInterface = () => {
           {
             assumption: 'Production life: 7 years (not 10)',
             expertReport: 'Second Report, Para 145(b)',
-            witnessStatement: 'Patricia Santillán Statement, Para 8',
+            witnessStatement: 'Patricia Santillan Statement, Para 8',
             status: 'conflict',
             confidence: 'high',
             note: 'Witness states 8-10 years, expert uses 7 years without explanation',
@@ -171,7 +171,7 @@ const ExtractionInterface = () => {
               },
               witness: {
                 para: '8',
-                witness: 'Patricia Santillán (CFO)',
+                witness: 'Patricia Santillan (CFO)',
                 context: 'Based on our proven and probable reserves of approximately 1.8 million tonnes of ore and the planned production rate, we estimated that the Invicta mine would have an operational life in the range of 8 to 10 years. This estimate incorporated our understanding of the ore body geometry, expected recovery rates of approximately 92%, and the grade distribution within the deposit. The actual mine life would depend on gold prices, operating costs, and the economic cutoff grade, which could vary over time, but 8-10 years represented our best technical assessment as of mid-2019.'
               }
             }
@@ -179,7 +179,7 @@ const ExtractionInterface = () => {
           {
             assumption: 'Additional risk premium due to regulatory uncertainty',
             expertReport: 'Second Report, Para 144',
-            witnessStatement: 'Miguel Rodríguez Statement, Para 22',
+            witnessStatement: 'Miguel Rodriguez Statement, Para 22',
             status: 'conflict',
             confidence: 'medium',
             note: 'Witness indicates stability; expert assumes heightened risk',
@@ -190,7 +190,7 @@ const ExtractionInterface = () => {
               },
               witness: {
                 para: '22',
-                witness: 'Miguel Rodríguez (Government Relations)',
+                witness: 'Miguel Rodriguez (Government Relations)',
                 context: 'Throughout 2018 and the first seven months of 2019, our environmental and operating permits remained stable and in good standing with all relevant Peruvian government authorities. We maintained regular communication with MINEM (Ministry of Energy and Mines) and conducted all required environmental monitoring and reporting in full compliance with applicable regulations. While there were some general discussions in the media about mining policy reforms, we had no indication from government officials that our specific permits were at risk or that any new regulatory restrictions would be imposed on the Invicta project. It was only in late August 2019 that the regulatory situation deteriorated suddenly and unexpectedly.'
               }
             }

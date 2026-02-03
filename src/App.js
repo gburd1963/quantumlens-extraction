@@ -14,6 +14,9 @@ const ExtractionInterface = () => {
   const [witnessAudit, setWitnessAudit] = useState(null);
   const [excelAudit, setExcelAudit] = useState(null);
   const [auditsComplete, setAuditsComplete] = useState(false);
+  // eslint-disable-next-line no-unused-vars
+  const [citationReviews, setCitationReviews] = useState({});
+  const [reviewNotification, setReviewNotification] = useState(null);
   const stepNames = ['Upload', 'Organize', 'Extract', 'Review', 'Witness Audit', 'Excel Audit'];
 
   // Demo fixtures for quick hackathon demos
@@ -282,6 +285,21 @@ const ExtractionInterface = () => {
         }
       }
     });
+  };
+
+  // Citation review handlers
+  const handleCitationReview = (citationId, status) => {
+    setCitationReviews(prev => ({
+      ...prev,
+      [citationId]: { status, timestamp: new Date().toISOString() }
+    }));
+
+    const message = status === 'correct' ? '✓ Marked as correct' : '⚠ Flagged for review';
+    setReviewNotification(message);
+
+    setTimeout(() => {
+      setReviewNotification(null);
+    }, 2000);
   };
 
   // File upload handler
@@ -824,10 +842,28 @@ const ExtractionInterface = () => {
               </div>
               
               <div style={styles.confidence}>Confidence: ●●●●● (Very High)</div>
-              
+
               <div style={styles.modalActions}>
-                <button style={{...styles.button, ...styles.successButton}}>This looks correct</button>
-                <button style={{...styles.button, ...styles.warningButton}}>Flag for review</button>
+                <button
+                  onClick={() => {
+                    const citationId = `review-${selectedCitation.party}-${selectedCitation.field}`;
+                    handleCitationReview(citationId, 'correct');
+                    setSelectedCitation(null);
+                  }}
+                  style={{...styles.button, ...styles.successButton}}
+                >
+                  This looks correct
+                </button>
+                <button
+                  onClick={() => {
+                    const citationId = `review-${selectedCitation.party}-${selectedCitation.field}`;
+                    handleCitationReview(citationId, 'flagged');
+                    setSelectedCitation(null);
+                  }}
+                  style={{...styles.button, ...styles.warningButton}}
+                >
+                  Flag for review
+                </button>
               </div>
             </div>
           </div>
@@ -1135,8 +1171,26 @@ const ExtractionInterface = () => {
               <div style={styles.confidence}>Confidence: ●●●●● (Very High)</div>
 
               <div style={styles.modalActions}>
-                <button style={{...styles.button, ...styles.successButton}}>This looks correct</button>
-                <button style={{...styles.button, ...styles.warningButton}}>Flag for review</button>
+                <button
+                  onClick={() => {
+                    const citationId = `witness-${selectedParty}-${selectedCitation.type}-${selectedCitation.assumptionIdx}`;
+                    handleCitationReview(citationId, 'correct');
+                    setSelectedCitation(null);
+                  }}
+                  style={{...styles.button, ...styles.successButton}}
+                >
+                  This looks correct
+                </button>
+                <button
+                  onClick={() => {
+                    const citationId = `witness-${selectedParty}-${selectedCitation.type}-${selectedCitation.assumptionIdx}`;
+                    handleCitationReview(citationId, 'flagged');
+                    setSelectedCitation(null);
+                  }}
+                  style={{...styles.button, ...styles.warningButton}}
+                >
+                  Flag for review
+                </button>
               </div>
             </div>
           </div>
@@ -1216,6 +1270,12 @@ const ExtractionInterface = () => {
       </div>
 
       <TabNavigation />
+
+      {reviewNotification && (
+        <div style={styles.notification}>
+          {reviewNotification}
+        </div>
+      )}
 
       {step === 1 && <UploadScreen />}
       {step === 2 && <OrganizeScreen />}
@@ -1304,6 +1364,20 @@ const styles = {
   highlighted: { backgroundColor: 'rgba(251, 191, 36, 0.2)', padding: '2px 4px', borderRadius: '2px', fontWeight: '500', color: '#ffffff' },
   confidence: { marginTop: '15px', fontSize: '13px', color: '#94a3b8' },
   modalActions: { display: 'flex', gap: '10px', marginTop: '20px' },
+  notification: {
+    position: 'fixed',
+    top: '20px',
+    right: '20px',
+    backgroundColor: '#10b981',
+    color: '#ffffff',
+    padding: '12px 24px',
+    borderRadius: '8px',
+    fontSize: '14px',
+    fontWeight: '600',
+    boxShadow: '0 4px 12px rgba(0, 0, 0, 0.4)',
+    zIndex: 2000,
+    animation: 'slideIn 0.3s ease-out'
+  },
   // Witness Audit Styles
   auditDescription: { display: 'flex', alignItems: 'center', gap: '12px', padding: '12px 16px', backgroundColor: '#0f172a', border: '1px solid #334155', borderRadius: '6px', marginBottom: '20px' },
   partySelector: { display: 'flex', gap: '10px', marginBottom: '20px' },

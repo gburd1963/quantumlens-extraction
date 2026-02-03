@@ -83,17 +83,39 @@ const ExtractionInterface = () => {
           {
             assumption: 'Mine production capacity: 590t/day',
             expertReport: 'Second Report, Para 6.39',
-            witnessStatement: 'CEO Statement, Para 15: "Invicta was designed for 590 tonnes per day"',
+            witnessStatement: 'CEO Statement, Para 15',
             status: 'verified',
-            confidence: 'high'
+            confidence: 'high',
+            citations: {
+              expert: {
+                para: '6.39',
+                context: 'Based on the technical specifications provided by the Claimant and confirmed by the project engineering team, we have adopted the 590 tonnes per day production capacity for our primary valuation scenario. This figure represents the designed capacity of the Invicta processing plant as contemplated in the feasibility study and reflects the planned investment in crushing and milling equipment. The 590t/day scenario assumes implementation of the full Phase II expansion, which was authorized under the original environmental permits and would have been operationally achievable based on the proven and probable reserves available at the valuation date.'
+              },
+              witness: {
+                para: '15',
+                witness: 'CEO',
+                context: 'The Invicta Gold Project processing plant was specifically designed and engineered for a throughput capacity of 590 tonnes per day. This capacity was based on detailed metallurgical testing conducted by SGS Laboratories in Lima and was consistent with the proven reserve base that we had demonstrated through our 2018 drilling program. The crushing circuit, ball mill, and flotation cells were all sized to handle this production rate, and we had secured firm purchase orders for the key equipment components before the regulatory issues arose in August 2019.'
+              }
+            }
           },
           {
             assumption: 'Production life: 10 years',
             expertReport: 'Second Report, Para 6.42',
-            witnessStatement: 'CFO Statement, Para 8: "Reserve depletion over 8-10 years"',
+            witnessStatement: 'CFO Statement, Para 8',
             status: 'verified',
             confidence: 'medium',
-            note: 'Range given (8-10 years), expert used upper bound'
+            note: 'Range given (8-10 years), expert used upper bound',
+            citations: {
+              expert: {
+                para: '6.42',
+                context: 'Our mine life assumption of 10 years is based on the proven and probable mineral reserves as reported in the company\'s 2019 technical report, combined with the anticipated production rate of 590 tonnes per day. This timeframe assumes continuous mining operations and accounts for the ore grade distribution across the deposit. While the CFO\'s witness statement indicates a range of 8-10 years for reserve depletion, we have adopted the upper bound of this range as it aligns with the reserve calculations and processing capacity that form the basis of our DCF model.'
+              },
+              witness: {
+                para: '8',
+                witness: 'CFO',
+                context: 'Based on our proven and probable reserves of approximately 1.8 million tonnes of ore and the planned production rate, we estimated that the Invicta mine would have an operational life in the range of 8 to 10 years. This estimate incorporated our understanding of the ore body geometry, expected recovery rates of approximately 92%, and the grade distribution within the deposit. The actual mine life would depend on gold prices, operating costs, and the economic cutoff grade, which could vary over time, but 8-10 years represented our best technical assessment as of mid-2019.'
+              }
+            }
           },
           {
             assumption: 'Gold price forecast: $1,400/oz average',
@@ -101,7 +123,13 @@ const ExtractionInterface = () => {
             witnessStatement: 'No witness support found',
             status: 'unsupported',
             confidence: 'high',
-            note: 'Expert relies on market forecasts, not witness testimony'
+            note: 'Expert relies on market forecasts, not witness testimony',
+            citations: {
+              expert: {
+                para: '5.12',
+                context: 'For purposes of our valuation, we have adopted a long-term gold price forecast of US$1,400 per troy ounce, which represents the consensus forecast among major investment banks and mining analysts as of the valuation date in August 2019. This price assumption is based on published commodity price forecasts from institutions including Goldman Sachs, JP Morgan, and the World Bank, and reflects expectations for moderate gold price appreciation over the mine life. We note that actual gold prices at the valuation date were approximately US$1,520 per ounce, but we consider the US$1,400 long-term average to be a reasonable and defensible assumption for DCF modeling purposes.'
+              }
+            }
           }
         ],
         issues: 1
@@ -111,25 +139,58 @@ const ExtractionInterface = () => {
           {
             assumption: 'Revised production capacity: 590t/day',
             expertReport: 'Second Report, Para 145(b)',
-            witnessStatement: 'CEO Statement, Para 15: "Invicta was designed for 590 tonnes per day"',
+            witnessStatement: 'CEO Statement, Para 15',
             status: 'verified',
-            confidence: 'high'
+            confidence: 'high',
+            citations: {
+              expert: {
+                para: '145(b)',
+                context: 'We acknowledge that the Claimant\'s engineering plans contemplated a processing capacity of 590 tonnes per day, and we have revised our valuation to reflect this production scenario rather than the 355t/day capacity we initially considered. Based on our review of the technical documentation and witness testimony, including the CEO\'s statement regarding the design specifications, we accept that 590t/day represents the intended production capacity. However, as discussed below, we differ from the Claimant\'s expert on other critical assumptions including mine life and discount rate.'
+              },
+              witness: {
+                para: '15',
+                witness: 'CEO',
+                context: 'The Invicta Gold Project processing plant was specifically designed and engineered for a throughput capacity of 590 tonnes per day. This capacity was based on detailed metallurgical testing conducted by SGS Laboratories in Lima and was consistent with the proven reserve base that we had demonstrated through our 2018 drilling program. The crushing circuit, ball mill, and flotation cells were all sized to handle this production rate, and we had secured firm purchase orders for the key equipment components before the regulatory issues arose in August 2019.'
+              }
+            }
           },
           {
             assumption: 'Production life: 7 years (not 10)',
             expertReport: 'Second Report, Para 145(b)',
-            witnessStatement: 'CFO Statement, Para 8: "Reserve depletion over 8-10 years"',
+            witnessStatement: 'CFO Statement, Para 8',
             status: 'conflict',
             confidence: 'high',
-            note: 'Witness states 8-10 years, expert uses 7 years without explanation'
+            note: 'Witness states 8-10 years, expert uses 7 years without explanation',
+            citations: {
+              expert: {
+                para: '145(b)',
+                context: 'After careful review of the reserve calculations and considering the regulatory uncertainties that existed at the valuation date, we have adopted a more conservative mine life assumption of 7 years for our valuation. While the Claimant projects a 10-year mine life, we believe this is overly optimistic given the permit instability and the likelihood that production would have been curtailed or suspended due to ongoing regulatory challenges. Our 7-year assumption reflects a realistic assessment of how long the mine could have operated before encountering insurmountable regulatory or operational obstacles, even if the technical reserve base could theoretically support longer operations.'
+              },
+              witness: {
+                para: '8',
+                witness: 'CFO',
+                context: 'Based on our proven and probable reserves of approximately 1.8 million tonnes of ore and the planned production rate, we estimated that the Invicta mine would have an operational life in the range of 8 to 10 years. This estimate incorporated our understanding of the ore body geometry, expected recovery rates of approximately 92%, and the grade distribution within the deposit. The actual mine life would depend on gold prices, operating costs, and the economic cutoff grade, which could vary over time, but 8-10 years represented our best technical assessment as of mid-2019.'
+              }
+            }
           },
           {
             assumption: 'Additional risk premium due to regulatory uncertainty',
             expertReport: 'Second Report, Para 144',
-            witnessStatement: 'Government Relations Officer Statement, Para 22: "Permits were stable until August 2019"',
+            witnessStatement: 'Government Relations Officer Statement, Para 22',
             status: 'conflict',
             confidence: 'medium',
-            note: 'Witness indicates stability; expert assumes heightened risk'
+            note: 'Witness indicates stability; expert assumes heightened risk',
+            citations: {
+              expert: {
+                para: '144',
+                context: 'We have reassessed the appropriate discount rate for this project in light of the increased regulatory and operational risks that were apparent as of the valuation date. Our review of comparable gold mining projects in Latin America, combined with Peru-specific risk factors including permit stability concerns and community relations challenges, leads us to adopt a higher WACC than applied by the Claimant\'s expert. Specifically, we revise the discount rate to 14.6%, which includes an additional risk premium of 2.4% to account for project-specific uncertainties that were not adequately reflected in standard industry benchmarks. This discount rate is consistent with rates observed in similar mining projects facing comparable regulatory headwinds and reflects the heightened risk profile of the Invicta project in late 2019.'
+              },
+              witness: {
+                para: '22',
+                witness: 'Government Relations Officer',
+                context: 'Throughout 2018 and the first seven months of 2019, our environmental and operating permits remained stable and in good standing with all relevant Peruvian government authorities. We maintained regular communication with MINEM (Ministry of Energy and Mines) and conducted all required environmental monitoring and reporting in full compliance with applicable regulations. While there were some general discussions in the media about mining policy reforms, we had no indication from government officials that our specific permits were at risk or that any new regulatory restrictions would be imposed on the Invicta project. It was only in late August 2019 that the regulatory situation deteriorated suddenly and unexpectedly.'
+              }
+            }
           }
         ],
         issues: 2
@@ -919,6 +980,7 @@ const ExtractionInterface = () => {
   // Step 5: Witness Audit Screen
   const WitnessAuditScreen = () => {
     const [selectedParty, setSelectedParty] = useState('claimant');
+    const [selectedCitation, setSelectedCitation] = useState(null);
 
     const renderAssumption = (assumption, idx) => {
       const statusColors = {
@@ -944,11 +1006,37 @@ const ExtractionInterface = () => {
           <div style={styles.assumptionBody}>
             <div style={styles.sourceRow}>
               <span style={styles.sourceLabel}>Expert Report:</span>
-              <span style={styles.sourceText}>{assumption.expertReport}</span>
+              <span style={styles.sourceText}>
+                {assumption.expertReport.split('Para ')[0]}
+                {assumption.citations?.expert && (
+                  <span
+                    onClick={() => setSelectedCitation({type: 'expert', assumptionIdx: idx})}
+                    style={styles.citationLink}
+                  >
+                    Para {assumption.citations.expert.para}
+                  </span>
+                )}
+              </span>
             </div>
             <div style={styles.sourceRow}>
               <span style={styles.sourceLabel}>Witness Statement:</span>
-              <span style={styles.sourceText}>{assumption.witnessStatement}</span>
+              <span style={styles.sourceText}>
+                {assumption.witnessStatement === 'No witness support found' ? (
+                  <span style={{color: '#94a3b8', fontStyle: 'italic'}}>No witness support found</span>
+                ) : (
+                  <>
+                    {assumption.witnessStatement.split('Para ')[0]}
+                    {assumption.citations?.witness && (
+                      <span
+                        onClick={() => setSelectedCitation({type: 'witness', assumptionIdx: idx})}
+                        style={styles.citationLink}
+                      >
+                        Para {assumption.citations.witness.para}
+                      </span>
+                    )}
+                  </>
+                )}
+              </span>
             </div>
             {assumption.note && (
               <div style={styles.noteBox}>
@@ -1014,6 +1102,45 @@ const ExtractionInterface = () => {
         <div style={styles.assumptionsList}>
           {currentPartyData.assumptions.map((assumption, idx) => renderAssumption(assumption, idx))}
         </div>
+
+        {selectedCitation && (
+          <div style={styles.citationModal}>
+            <div style={styles.modalContent}>
+              <button onClick={() => setSelectedCitation(null)} style={styles.closeBtn}>×</button>
+              <h3>Citation Viewer</h3>
+              <p><strong>Document:</strong> {selectedCitation.type === 'expert'
+                ? (selectedParty === 'claimant' ? 'Expert Report of Accuracy' : 'Expert Report of AlixPartners')
+                : `Witness Statement - ${currentPartyData.assumptions[selectedCitation.assumptionIdx].citations.witness.witness}`
+              }</p>
+              <p><strong>Location:</strong> Paragraph {
+                selectedCitation.type === 'expert'
+                  ? currentPartyData.assumptions[selectedCitation.assumptionIdx].citations.expert.para
+                  : currentPartyData.assumptions[selectedCitation.assumptionIdx].citations.witness.para
+              }</p>
+
+              <div style={styles.pdfPreview}>
+                <div style={styles.extractedContext}>
+                  {selectedCitation.type === 'expert' ? (
+                    <>
+                      <strong>Para {currentPartyData.assumptions[selectedCitation.assumptionIdx].citations.expert.para}:</strong> {currentPartyData.assumptions[selectedCitation.assumptionIdx].citations.expert.context}
+                    </>
+                  ) : (
+                    <>
+                      <strong>Para {currentPartyData.assumptions[selectedCitation.assumptionIdx].citations.witness.para}:</strong> {currentPartyData.assumptions[selectedCitation.assumptionIdx].citations.witness.context}
+                    </>
+                  )}
+                </div>
+              </div>
+
+              <div style={styles.confidence}>Confidence: ●●●●● (Very High)</div>
+
+              <div style={styles.modalActions}>
+                <button style={{...styles.button, ...styles.successButton}}>This looks correct</button>
+                <button style={{...styles.button, ...styles.warningButton}}>Flag for review</button>
+              </div>
+            </div>
+          </div>
+        )}
 
         <div style={styles.summaryBox}>
           <strong>Summary:</strong> Found {currentPartyData.issues} issue(s) requiring tribunal attention.
@@ -1162,6 +1289,7 @@ const styles = {
   th: { padding: '15px', backgroundColor: '#07101a', borderBottom: '2px solid rgba(251,191,36,0.12)', textAlign: 'left', fontWeight: '700', color: '#f1f5f9' },
   td: { padding: '12px 15px', borderBottom: '1px solid #1f2b38', color: '#dbeafe' },
   citationBtn: { marginLeft: '8px', padding: '3px 6px', backgroundColor: 'transparent', color: '#fbbf24', border: 'none', fontSize: '12px', cursor: 'pointer', textDecoration: 'underline' },
+  citationLink: { color: '#fbbf24', cursor: 'pointer', textDecoration: 'underline', fontSize: '13px', transition: 'color 0.2s', ':hover': { color: '#fcd34d' } },
   agree: { color: '#10b981', fontSize: '18px', fontWeight: 'bold' },
   disagree: { color: '#fbbf24', fontSize: '18px', fontWeight: 'bold' },
   legend: { marginTop: '15px', fontSize: '13px', color: '#94a3b8' },

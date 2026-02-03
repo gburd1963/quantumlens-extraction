@@ -30,7 +30,7 @@ const ExtractionInterface = () => {
         productionLife: '10 years',
         valuationDate: '26 Aug 2019',
         alternative355: '$32.1M',
-        citations: { damages: { para: '6.63(a)' }, wacc: { para: '6.38' }, scenario: { para: '6.39' } }
+        citations: { damages: { para: '6.63(a)' }, wacc: { para: '6.38' }, scenario: { para: '6.39' }, production: { para: '6.42' } }
       },
       respondent: {
         expert: 'AlixPartners',
@@ -52,7 +52,7 @@ const ExtractionInterface = () => {
         productionLife: '8 years',
         valuationDate: '01 Jan 2020',
         alternative355: '$10.1M',
-        citations: { damages: { para: 10 }, wacc: { para: 12 }, scenario: { para: 9 } }
+        citations: { damages: { para: 10 }, wacc: { para: 12 }, scenario: { para: 9 }, production: { para: 11 } }
       },
       respondent: {
         expert: 'Boundary Economics',

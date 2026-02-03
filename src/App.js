@@ -346,7 +346,8 @@ const ExtractionInterface = () => {
               damages: { para: '6.63(a)', page: 59, report: '2nd' },
               wacc: { para: '6.38', page: 53, report: '2nd' },
               fmv: { para: '7.1', page: 55, report: '1st' },
-              scenario: { para: '6.39', page: 53, report: '2nd' }
+              scenario: { para: '6.39', page: 53, report: '2nd' },
+              production: { para: '6.42', page: 54, report: '2nd' }
             }
           },
           respondent: {
@@ -754,16 +755,16 @@ const ExtractionInterface = () => {
                 <td style={styles.td}>Production Life</td>
                 <td style={styles.td}>
                   {extractedData.claimant.productionLife}
-                  <button 
+                  <button
                     onClick={() => setSelectedCitation({party: 'claimant', field: 'production'})}
                     style={styles.citationBtn}
                   >
-                    [Para {extractedData.claimant.citations.scenario.para}]
+                    [Para {extractedData.claimant.citations.production.para}]
                   </button>
                 </td>
                 <td style={styles.td}>
                   {extractedData.respondent.productionLife}
-                  <button 
+                  <button
                     onClick={() => setSelectedCitation({party: 'respondent', field: 'production'})}
                     style={styles.citationBtn}
                   >
@@ -836,6 +837,16 @@ const ExtractionInterface = () => {
                   {selectedCitation.field === 'wacc' && selectedCitation.party === 'respondent' && (
                     <>
                       <strong>144.</strong> We have reassessed the appropriate discount rate for this project in light of the increased regulatory and operational risks that were apparent as of the valuation date. Our review of comparable gold mining projects in Latin America, combined with Peru-specific risk factors including permit stability concerns and community relations challenges, leads us to adopt a higher WACC than applied by the Claimant's expert. Specifically, <span style={styles.highlighted}>we revise the discount rate to 14.6%</span>, which includes an additional risk premium of 2.4% to account for project-specific uncertainties that were not adequately reflected in standard industry benchmarks. This discount rate is consistent with rates observed in similar mining projects facing comparable regulatory headwinds and reflects the heightened risk profile of the Invicta project in late 2019.
+                    </>
+                  )}
+                  {selectedCitation.field === 'production' && selectedCitation.party === 'claimant' && (
+                    <>
+                      <strong>6.42</strong> Our mine life assumption of <span style={styles.highlighted}>10 years</span> is based on the proven and probable mineral reserves as reported in the company's 2019 technical report, combined with the anticipated production rate of 590 tonnes per day. This timeframe assumes continuous mining operations and accounts for the ore grade distribution across the deposit. While Ms. Santillán's witness statement indicates a range of 8-10 years for reserve depletion, we have adopted the upper bound of this range as it aligns with the reserve calculations and processing capacity that form the basis of our DCF model. The 10-year mine life reflects a reasonable extraction schedule given the ore body characteristics and planned processing capacity.
+                    </>
+                  )}
+                  {selectedCitation.field === 'production' && selectedCitation.party === 'respondent' && (
+                    <>
+                      <strong>145(b).</strong> After careful review of the reserve calculations and considering the regulatory uncertainties that existed at the valuation date, we have adopted a more conservative mine life assumption of <span style={styles.highlighted}>7 years</span> for our valuation. While the Claimant projects a 10-year mine life, we believe this is overly optimistic given the permit instability and the likelihood that production would have been curtailed or suspended due to ongoing regulatory challenges. Our 7-year assumption reflects a realistic assessment of how long the mine could have operated before encountering insurmountable regulatory or operational obstacles, even if the technical reserve base could theoretically support longer operations. This shortened mine life significantly impacts the project valuation.
                     </>
                   )}
                 </div>
